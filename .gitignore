@@ -1,0 +1,21 @@
+# Build output (about 7 GB)
+build/
+DerivedData/
+*.log
+
+# Model weights live outside this folder; never commit them
+*.litertlm
+*.task
+*.gguf
+
+# macOS / Xcode user state
+.DS_Store
+xcuserdata/
+*.xcuserstate
+.swiftpm/
+Packages/BoltCore/.build/
+*.xcodeproj/
+
+# Brainstorming companion mockups
+.superpowers/
+tools/robot-rig/out/
