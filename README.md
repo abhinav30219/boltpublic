@@ -1,6 +1,6 @@
 # Bolt
 
-Bolt is an on-device health companion for iPhone that pairs Google's **Gemma** (running locally through LiteRT-LM) with a **Petoi** robot. Gemma reads your live vitals and activity and writes short insight cards and chat answers, and a 3D companion on screen mirrors a connected Petoi robot's moves. Everything runs on the phone; nothing is sent to a server.
+Bolt is an on-device health companion for iPhone that pairs Google's **Gemma** (running locally through LiteRT-LM) with a [**Petoi Quaddle open source robot dog**](https://github.com/PetoiCamp/opencat-gemma/commits/main/). Gemma reads your live vitals and activity and writes short insight cards and chat answers, and a 3D companion on screen mirrors the connected Petoi Quaddle's moves. Everything runs on the phone; nothing is sent to a server.
 
 The original Bolt app was built to work with a specific proprietary wearable (the Clair Band). This repository replaces that dependency entirely: instead of the Clair Band, Bolt now reads heart rate from **any standard Bluetooth heart-rate device** (the Bluetooth SIG Heart Rate Service), and falls back to the **iPhone's own Core Motion sensors** for activity, steps, and motion. No proprietary band, protocol, or model is required, so the app runs with any HR strap or watch, or with no accessory at all.
 
@@ -9,7 +9,7 @@ The original Bolt app was built to work with a specific proprietary wearable (th
 - **Live heart rate** from any standard Bluetooth Heart Rate strap or watch (Bluetooth SIG Heart Rate Service, `0x180D`). Optional battery and skin-temperature if the device exposes them.
 - **Activity and steps** from Apple Core Motion (`CMMotionActivity` + `CMPedometer`): walking, running, still, cycling, step count and cadence, all on-device.
 - **Gemma insight cards and chat**: Gemma 4 E2B runs locally via LiteRT-LM and writes short cards as your data changes, and answers questions using tools over your live metrics and a small on-device memory.
-- **Robot companion**: a 3D companion (RealityKit / SceneKit) reacts to your activity and mirrors moves sent to a connected **Petoi** robot (wave, flip, walk, idle). Trigger a flip with an on-screen button or a phone shake.
+- **Robot companion**: a 3D companion (RealityKit / SceneKit) reacts to your activity and mirrors moves sent to a connected [**Petoi Quaddle open source robot dog**](https://github.com/PetoiCamp/opencat-gemma/commits/main/) (wave, flip, walk, idle). Trigger a flip with an on-screen button or a phone shake.
 - **Basic fall heuristic** (clearly labelled, not a medical device): a simple phone-accelerometer impact-plus-stillness detector, with a manual "simulate a fall" button for demos.
 - **Demo mode**: a synthetic session so you can try the whole flow with no band and no robot.
 
@@ -53,7 +53,7 @@ Without a model, cards and chat fall back to templates; the rest of the app stil
 
 - **Privacy**: all processing is on-device. Bluetooth is used only to connect to a heart-rate band and the robot.
 - **Fall detection** here is a basic heuristic for demonstration, not a medical or safety-certified feature.
-- Built for the AGI House Gemma hackathon, integrating **Gemma** (Google) and **Petoi** robotics.
+- Built for the AGI House Gemma hackathon, integrating **Gemma** (Google) and the [**Petoi Quaddle open source robot dog**](https://github.com/PetoiCamp/opencat-gemma/commits/main/).
 
 ## License
 
